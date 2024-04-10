@@ -55,7 +55,6 @@ if (!$result) {
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <body bgcolor="#ffb6c1">
-<div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="header_top">
@@ -103,7 +102,7 @@ if (!$result) {
             </div>
           </nav>
         </div>
-      </div>
+      
     </header>
 
   </div>
