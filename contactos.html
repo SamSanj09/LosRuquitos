@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -12,9 +11,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/fevicon.png" type="">
-
   <title> LosRuquitos </title>
-
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -75,30 +72,24 @@
                   <a class="nav-link" href="pedidos.html">Pedidos</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Eventos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="eventos.html">Contactos <span class="sr-only">(current)</span></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                 </li>
-
               </ul>
             </div>
           </nav>
         </div>
       </div>
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <!-- service section -->
-
- <!-- contact section -->
  <section class="contact_section layout_padding-top">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="heading_container">
             <h2>
-              Contact Us
+              Contactanos Inmediatamente
             </h2>
           </div>
         </div>
@@ -106,24 +97,24 @@
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="form_container">
-            <form action="">
+            <form action="contactos.php" method="post">
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Nombre Inicial..." name="nombre"/>
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Numero telefonico..." name="celular"/>
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Correo..."  name="correo"/>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Descripcion..." name="dmensaje"/>
               </div>
               <div class="btn_box">
-                <button>
-                  SEND
+                <button type="submit"> <!-- Cambiado 'button' a 'submit' para enviar el formulario -->
+                    SEND
                 </button>
-              </div>
+            </div>
             </form>
           </div>
         </div>
@@ -137,42 +128,8 @@
       </div>
     </div>
   </section>
-  <!-- end contact section -->
-
-  <!-- end service section -->
-
-    <!-- end slider section -->
   </div>
 
-
-  <!-- service section -->
-
- 
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <!-- end about section -->
-
-  <!-- track section -->
-
-
-
-  <!-- end track section -->
-
-  <!-- client section -->
-
-  
-
-  <!-- end client section -->
-
-  <!-- contact section -->
-  
-  <!-- end contact section -->
-
-  <!-- info section -->
 
   <section class="info_section layout_padding2">
     <div class="container">
@@ -180,25 +137,25 @@
         <div class="col-md-6 col-lg-3 info_col">
           <div class="info_contact">
             <h4>
-              Address
+              Direccion
             </h4>
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Ubication 
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Llama 73596367
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  fotosLPCity@gmail.com
                 </span>
               </a>
             </div>
@@ -221,10 +178,11 @@
         <div class="col-md-6 col-lg-3 info_col">
           <div class="info_detail">
             <h4>
-              Info
+              Informacion
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+              Hacemos un momento feliz para ti y tu familia, capturamos
+              tu momento inolvidable con fotos bastantes especiales para ti
             </p>
           </div>
         </div>
@@ -264,7 +222,7 @@
   <!-- custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   </script>
   <!-- End Google Map -->
 
