@@ -108,10 +108,10 @@ $result = $conn->query($sql);
                   <a class="nav-link" href="galeria.html">Galeria</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pedidos.html">Pedidos</a>
+                  <a class="nav-link" href="pedidos.php">Pedidos</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Contactos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="contactos.php">Contactos <span class="sr-only">(current)</span></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
