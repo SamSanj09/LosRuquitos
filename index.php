@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobilee Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metass -->
+  <!-- Site Metas -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -16,7 +16,7 @@
   <title> LosRuquitos </title>
 
 
-  <!-- bootstrap ccore css -->
+  <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!-- fonts style -->
@@ -62,12 +62,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Eventos <span class="sr-only">(current)</span></a>
-                  </li>
+                  <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="eventos.php">Eventos</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="galeria.html">Galeria</a>
                 </li>
@@ -89,38 +89,39 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <!-- service section -->
-
-  <section class="service_section layout_padding">
-    <div class="service_container">
-      <div class="container ">
-        <div class="heading_container">
-            <h2>Galería de <span>Imágenes</span></h2>
-            <p>Disfruta de nuestra colección de imágenes capturadas por nuestros fotógrafos.</p>
-          </div>
-          <div class="row gallery">
-            <!-- Aquí se generarán dinámicamente las imágenes con un loop en el servidor -->
-            <div class="col-md-4 gallery-item">
-              <div class="box">
-                    <div class="img-box">
-                    <img src="images/ciudad1.jpg" alt="Descripción de la imagen" id="imagen-1">
+    <section class="slider_section ">
+      <div class="slider_bg_box">
+        <img src="images/ciudad1.jpg" alt="">
+      </div>
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 ">
+                  <div class="detail-box">
+                    <h1>
+                      Su estudio fotográfico <br>
+                      favorito
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Explorar galeria
+                      </a>
                     </div>
-                    <div class="img-box">
-                    <img src="images/ciudad2.jpg" alt="Descripción de la imagen" id="imagen-1">
-                    </div>
-                    <div class="img-box">
-                        <img src="images/ciudad3.jpg" alt="Descripción de la imagen" id="imagen-1">
-                        </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- Fin del loop -->
           </div>
+          
+        
       </div>
-    </div>
-  </section>
 
-  <!-- end service section -->
-
+    </section>
     <!-- end slider section -->
   </div>
 
