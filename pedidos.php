@@ -71,7 +71,7 @@
                     <a class="nav-link" href="galeria.html">Galeria</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="pedidos.html">Pedidos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="pedidos.php">Pedidos <span class="sr-only">(current)</span></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contactos.html">Contactos</a>
@@ -103,21 +103,22 @@
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="form_container">
-            <form action="">
+            <form action="sql.php" method="POST">
               <div>
-                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu nombre" name="nombre" />
               </div>
               <div>
-                <input type="text" placeholder="Tu apellido" />
+                <input type="text" placeholder="Tu apellido" name="apellido" />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" />
               </div>
               <div>
-                <input type="number" placeholder="Cantidad de Fotos" />
+                <input type="number" placeholder="Cantidad de Fotos" name="cantidad" />
               </div>              <div>
-                <input type="number" placeholder="Precio" />
+                <input type="number" placeholder="Precio" name="precio"/>
               </div>
+
 
               <div class="btn_box">
                 <button>
