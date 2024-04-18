@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <!-- Basicc -->
+  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
@@ -35,6 +35,18 @@
 </head>
 
 <body>
+
+<?php
+   include("sql.php");
+   $link=Conectarse();
+		if ($link=="")
+		{
+			echo "<H1>Error en apertura de bases de datos.</H1>";
+			exit();
+		}
+	
+	$result=mysqli_query($link,"select * from pedidos");
+?>
 
   <div class="hero_area">
     <!-- header section strats -->
@@ -77,7 +89,7 @@
                   <a class="nav-link" href="contactos.html">Contactos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.php"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                  <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                 </li>
 
               </ul>
@@ -103,21 +115,65 @@
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="form_container">
-            <form action="">
+            <form action="sql.php" method="$_POST">
+              
+            <?php
+              // Inicialización de variables con valores predeterminados
+              $nombre = "";
+              $apellido = "";
+              $email = "";
+              $cantidad = "";
+              $precio = "";
+
+              // Verificación de variables POST
+              if(isset($_POST['nombre'])) {
+                  $nombre = $_POST['nombre'];
+              }
+              if(isset($_POST['apellido'])) {
+                  $apellido = $_POST['apellido'];
+              }
+              if(isset($_POST['email'])) {
+                  $email = $_POST['email'];
+              }
+              if(isset($_POST['cantidad'])) {
+                  $cantidad = $_POST['cantidad'];
+              }
+              if(isset($_POST['precio'])) {
+                  $precio = $_POST['precio'];
+              }
+            
+            ?>
               <div>
-                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu nombre" name="nombre" value="<?php echo $nombre;?>"/>
               </div>
               <div>
-                <input type="text" placeholder="Tu apellido" />
+                <input type="text" placeholder="Tu apellido" name="apellido" value="<?php echo $apellido;?>"/>
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" value="<?php echo $email;?>"/>
               </div>
               <div>
-                <input type="number" placeholder="Cantidad de Fotos" />
+                <input type="number" placeholder="Cantidad de Fotos" name="cantidad" value="<?php echo $cantidad;?>"/>
               </div>              <div>
-                <input type="number" placeholder="Precio" />
+                <input type="number" placeholder="Precio" name="precio" value="<?php echo $precio;?>"/>
               </div>
+              
+
+              <?php
+                $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+                $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : "";
+                $email = isset($_POST['email']) ? $_POST['email'] : "";
+                $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
+                $precio = isset($_POST['precio']) ? $_POST['precio'] : "";
+                
+                
+                //liberamos memoria que ocupa la consulta...
+                mysqli_free_result($result);
+                
+                //cerramos la conexión con el motor de BD
+                mysqli_close($link);
+              ?>
+
 
               <div class="btn_box">
                 <button>
