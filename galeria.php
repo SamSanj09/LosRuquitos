@@ -5,7 +5,7 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobilee Metas -->
+  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
   <meta name="keywords" content="" />
@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="images/fevicon.png" type="">
 
   <title> LosRuquitos </title>
-
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -62,23 +61,23 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="eventos.php">Eventos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="galeria.php">Galeria</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pedidos.html">Pedidos</a>
-                </li>
+                    <a class="nav-link" href="eventos.html">Eventos</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="galeria.html">Galeria <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pedidos.html">Pedidos</a>
+                  </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contactos.html">Contactos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.php"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                  <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                 </li>
 
               </ul>
@@ -89,39 +88,74 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
-      <div class="slider_bg_box">
-        <img src="images/ciudad1.jpg" alt="">
-      </div>
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 ">
-                  <div class="detail-box">
-                    <h1>
-                      Su estudio fotográfico <br>
-                      favorito
-                    </h1>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Explorar galeria
-                      </a>
+    <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container">
+            <h2>Galería de <span>Imágenes</span></h2>
+            <p>Disfruta de nuestra colección de imágenes capturadas por nuestros fotógrafos.</p>
+          </div>
+          <div class="row gallery">
+            <!-- Aquí se generarán dinámicamente las imágenes con un loop en el servidor -->
+            <div class="col-md-4 gallery-item">
+              <div class="box">
+                    <div class="img-box">
+                    <img src="images/ciudad1.jpg" alt="Descripción de la imagen" id="imagen-1">
                     </div>
-                  </div>
-                </div>
+                    <div class="img-box">
+                    <img src="images/ciudad2.jpg" alt="Descripción de la imagen" id="imagen-1">
+                    </div>
+                    <div class="img-box">
+                        <img src="images/ciudad3.jpg" alt="Descripción de la imagen" id="imagen-1">
+                        </div>
               </div>
             </div>
+            <!-- Fin del loop -->
           </div>
-          
-        
       </div>
+    </div>
+  </section>
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="text-primary">Subir imagen</h1>
+                <form action="backend/subir.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="my-input">Seleccionar Archivo</label>
+                        <input id="my-input" class="form-control" type="file" name="imagen">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">TItulo</label>
+                        <input id="my-input" class="form-control" type="text" name="titulo">
+                    </div>
+                    <input type="submit" value="Guardar" name="Guardar">
+                </form>
 
-    </section>
+            </div>
+            <div class="col-lg-8">
+                <h1 class="text-primary text-center">Galerias de imagenes</h1>
+                <br>
+
+                <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Foto </h5>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+  <!-- end service section -->
+
     <!-- end slider section -->
   </div>
 
