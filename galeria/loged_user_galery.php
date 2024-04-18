@@ -15,7 +15,6 @@
 
   <title> LosRuquitos </title>
 
-
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -68,17 +67,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="eventos.html">Eventos</a>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="galeria.html">Galeria</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pedidos.html">Pedidos</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Eventos <span class="sr-only">(current)</span></a>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="galeria.html">Galeria <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pedidos.html">Pedidos</a>
                   </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.php"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                  <a class="nav-link" href="contactos.html">Contactos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                 </li>
 
               </ul>
@@ -90,54 +89,73 @@
     <!-- end header section -->
     <!-- slider section -->
     <!-- service section -->
-
- <!-- contact section -->
- <section class="contact_section layout_padding-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-4 col-md-5 offset-md-1">
-          <div class="heading_container">
-            <h2>
-              Contact Us
-            </h2>
+<!--  
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container">
+            <h2>Galería de <span>Imágenes</span></h2>
+            <p>Disfruta de nuestra colección de imágenes capturadas por nuestros fotógrafos.</p>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-5 offset-md-1">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Your Name" />
+          <div class="row gallery">
+            
+            <div class="col-md-4 gallery-item">
+              <div class="box">
+                    <div class="img-box">
+                    <img src="images/ciudad1.jpg" alt="Descripción de la imagen" id="imagen-1">
+                    </div>
+                    <div class="img-box">
+                    <img src="images/ciudad2.jpg" alt="Descripción de la imagen" id="imagen-1">
+                    </div>
+                    <div class="img-box">
+                        <img src="images/ciudad3.jpg" alt="Descripción de la imagen" id="imagen-1">
+                        </div>
               </div>
-              <div>
-                <input type="text" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6 px-0">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
             </div>
+            
           </div>
-        </div>
       </div>
     </div>
   </section>
-  <!-- end contact section -->
+
+  -->
+
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="text-primary">Subir imagen</h1>
+                <form action="backend/subir.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="my-input">Seleccionar Archivo</label>
+                        <input id="my-input" class="form-control" type="file" name="imagen">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">TItulo</label>
+                        <input id="my-input" class="form-control" type="text" name="titulo">
+                    </div>
+                    <input type="submit" value="Guardar" name="Guardar">
+                </form>
+
+            </div>
+            <div class="col-lg-8">
+                <h1 class="text-primary text-center">Galerias de imagenes</h1>
+                <br>
+
+                <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Foto </h5>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
 
   <!-- end service section -->
 
@@ -236,7 +254,7 @@
     </div>
   </section>
 
-  <!-- end info sectionn -->
+  <!-- end info section -->
 
   <!-- footer section -->
   <section class="footer_section">

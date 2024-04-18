@@ -1,3 +1,29 @@
+<?php
+function Conectarse()
+{
+    $link = mysqli_connect("localhost", "root", "", "ruquitos");
+
+    // Verificar conexión
+    if (mysqli_connect_errno()) {
+        echo "<H1>Error en apertura de bases de datos: " . mysqli_connect_error() . "</H1>";
+        exit();
+    }
+
+    return $link; // Devolver conexión exitosa
+}
+
+// Establecer conexión
+$link = Conectarse();
+
+// Consulta a la base de datos
+$result = mysqli_query($link, "SELECT * FROM eventos_info");
+
+if (!$result) {
+    echo "<H1>Error al ejecutar la consulta.</H1>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -63,10 +89,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Eventos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="eventos.php">Eventos <span class="sr-only">(current)</span></a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="galeria.html">Galeria</a>
@@ -87,72 +113,58 @@
         </div>
       </div>
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <!-- service section -->
+    <div class="container">
+  <div class="row">
+    <?php
+    $count = 0; // Contador para controlar el número de eventos por fila
+    while ($fila = mysqli_fetch_array($result)) {
+      // Obtener datos de la fila
+      $nombre = $fila['nombre'];
+      $descripcion = $fila['descripcion'];
+      $fecha = $fila['fecha'];
+      // Verificar si la clave 'costo' está definida antes de acceder a ella
+      $costo = isset($fila['costo_foto']) ? $fila['costo_foto'] : "No especificado";
+      // La columna 'imagen' contiene la ruta a la imagen en la base de datos, aquí debes adaptarla según tu estructura de base de datos
+      $imagen = $fila['imagen'];
 
-  <section class="service_section layout_padding">
-    <div class="service_container">
-      <div class="container ">
-        <div class="heading_container">
-            <h2>Galería de <span>Imágenes</span></h2>
-            <p>Disfruta de nuestra colección de imágenes capturadas por nuestros fotógrafos.</p>
-          </div>
-          <div class="row gallery">
-            <!-- Aquí se generarán dinámicamente las imágenes con un loop en el servidor -->
-            <div class="col-md-4 gallery-item">
-              <div class="box">
-                    <div class="img-box">
-                    <img src="images/ciudad1.jpg" alt="Descripción de la imagen" id="imagen-1">
-                    </div>
-                    <div class="img-box">
-                    <img src="images/ciudad2.jpg" alt="Descripción de la imagen" id="imagen-1">
-                    </div>
-                    <div class="img-box">
-                        <img src="images/ciudad3.jpg" alt="Descripción de la imagen" id="imagen-1">
-                        </div>
-              </div>
-            </div>
-            <!-- Fin del loop -->
-          </div>
-      </div>
-    </div>
-  </section>
+      // Mostrar la información en forma de panel
+      echo '<div class="col-md-3">';
+      echo '<div class="card">';
+      echo '<img src="' . $imagen . '" class="card-img-top" alt="Imagen del evento">';
+      echo '<div class="card-body">';
+      echo '<h5 class="card-title">' . $nombre . '</h5>';
+      echo '<p class="card-text">' . $descripcion . '</p>';
+      echo '<p class="card-text">Fecha: ' . $fecha . '</p>';
+      echo '<p class="card-text">Costo: ' . $costo . '</p>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
 
-  <!-- end service section -->
+      $count++;
 
+      // Si se han mostrado 4 eventos, cerrar la fila actual y abrir una nueva
+      if ($count % 4 == 0) {
+        echo '</div>'; // Cierra la fila actual
+        echo '<div class="row">'; // Abre una nueva fila
+      }
+    }
+
+    // Verificar si se necesita cerrar la última fila
+    if ($count % 4 != 0) {
+      echo '</div>'; // Cierra la última fila si no está completa
+    }
+    ?>
+  </div>
+</div>
+
+    Aqui
+
+
+  <button onclick="window.location.href = 'administrador_evento.php';">Ir a archivo PHP</button>
     <!-- end slider section -->
   </div>
 
 
-  <!-- service section -->
-
- 
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <!-- end about section -->
-
-  <!-- track section -->
-
-
-
-  <!-- end track section -->
-
-  <!-- client section -->
-
-  
-
-  <!-- end client section -->
-
-  <!-- contact section -->
-  
-  <!-- end contact section -->
-
-  <!-- info section -->
 
   <section class="info_section layout_padding2">
     <div class="container">

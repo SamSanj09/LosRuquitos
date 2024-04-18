@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <!-- Basic -->
+  <!-- Basicc -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="images/fevicon.png" type="">
 
   <title> LosRuquitos </title>
-
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -68,15 +67,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="eventos.html">Eventos</a>
                   </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="galeria.html">Galeria</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pedidos.html">Pedidos</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="eventos.html">Eventos <span class="sr-only">(current)</span></a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galeria</a>
                   </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="pedidos.php">Pedidos <span class="sr-only">(current)</span></a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactos.html">Contactos</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="login.php"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                 </li>
@@ -89,16 +88,14 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <!-- service section -->
-
- <!-- contact section -->
- <section class="contact_section layout_padding-top">
+    <!-- contact section -->
+  <section class="contact_section layout_padding-top">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="heading_container">
             <h2>
-              Contact Us
+             Pedidos
             </h2>
           </div>
         </div>
@@ -106,19 +103,23 @@
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="form_container">
-            <form action="">
+            <form action="sql.php" method="POST">
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Tu nombre" name="nombre" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Tu apellido" name="apellido" />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="number" placeholder="Cantidad de Fotos" name="cantidad" />
+              </div>              <div>
+                <input type="number" placeholder="Precio" name="precio"/>
               </div>
+
+
               <div class="btn_box">
                 <button>
                   SEND
@@ -127,52 +128,14 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-7 col-md-6 px-0">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
-  <!-- end contact section -->
 
-  <!-- end service section -->
-
-    <!-- end slider section -->
   </div>
 
 
-  <!-- service section -->
-
- 
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <!-- end about section -->
-
-  <!-- track section -->
-
-
-
-  <!-- end track section -->
-
-  <!-- client section -->
-
-  
-
-  <!-- end client section -->
-
-  <!-- contact section -->
-  
-  <!-- end contact section -->
-
-  <!-- info section -->
 
   <section class="info_section layout_padding2">
     <div class="container">
@@ -236,7 +199,7 @@
     </div>
   </section>
 
-  <!-- end info sectionn -->
+  <!-- end info section -->
 
   <!-- footer section -->
   <section class="footer_section">
